@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/style.css">
+<title>313 / 四年，留在这里</title>
+</head>
+<body>
+<main id="scene" aria-label="313 宿舍三维场景"></main>
+<header class="header"><div class="brand"><div class="eyebrow">A PLACE TO REMEMBER</div><h1><strong>313</strong><span>/ 四年，留在这里</span></h1><p>沿着这条过道，再走一遍。</p></div><div class="actions"><button class="action" id="walk" aria-pressed="false" title="切换自由漫游">漫游</button><button class="icon-button" id="info" aria-label="查看操作说明">?</button><button class="icon-button" id="full" aria-label="全屏查看">⛶</button></div></header>
+<aside id="details"><p><strong>把视角留在记忆里</strong></p><p>观览：拖动旋转，滚轮缩放，右键拖动平移。触屏可单指转动，双指缩放与平移。</p><p>漫游：W A S D 移动，Q / E 下降与上升，拖动环顾。按住 Shift 可加速。</p><p>点击「全景」可打开墙顶查看布局；其他视角会恢复完整房间。</p><p>依据照片与视频重建，尺寸与被遮挡的部分为估算。漫游支持自由移动。</p><p>阳台为露天，外侧是道路和两排树木；树距和道路位置按描述估算。</p><p>这里使用便于浏览的材质与光照，更多细节保留在 Blender 场景中。</p></aside>
+<div id="toast" aria-live="polite"></div>
+<nav class="footer" aria-label="场景视角"><div class="views"><button data-view="entry" class="active" aria-pressed="true">门口</button><button data-view="curtain" aria-pressed="false">床帘</button><button data-view="ownbed" aria-pressed="false">我的床</button><button data-view="back" aria-pressed="false">回望</button><button data-view="balcony" aria-pressed="false">阳台</button><button data-view="overview" aria-pressed="false">全景</button></div><div class="help" id="help">拖动环顾 · 滚轮拉近 · 右键平移</div></nav>
+<div id="touchpad" aria-label="漫游方向控制"><button class="up" data-key="KeyW" aria-label="向前">↑</button><button class="left" data-key="KeyA" aria-label="向左">←</button><button class="down" data-key="KeyS" aria-label="向后">↓</button><button class="right" data-key="KeyD" aria-label="向右">→</button></div>
+<div class="corner">313 · 大学宿舍<br>照片与视频中的那一天</div>
+<div id="loading"><div><div class="load-title">313</div><div class="load-copy">四年，留在这里</div><div class="track"><i id="progress"></i></div><div id="loadStatus" role="status">正在打开记忆中的房间…</div><div class="load-error" id="error"></div></div></div>
+<script src="assets/three.min.js" defer></script>
+<script src="assets/GLTFLoader.js" defer></script>
+<script src="assets/OrbitControls.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
